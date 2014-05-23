@@ -1,8 +1,15 @@
 .container-fluid.main-footer.text-center
   hr
   ul.inline
-    li: a(href="#") About us
-    li: a(href="#") Support
-    li: a(href="#") API
-    li: a(href="#") Privacy
+    li: a(href="http://chew.tv/") About
+    li: a(href="http://blog.chew.tv") Blog
+    li: a(href="http://chew.tv/login") Login
     li &copy; #{ name }
+script.
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41074057-1', 'chew.tv');
+    ga('send', 'pageview');
