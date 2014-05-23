@@ -1,6 +1,6 @@
 {
   "name": "Chew",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Chew Live streaming guide",
   "main": "Gruntfile.js",
   "scripts": {
@@ -16,6 +16,12 @@
   "devDependencies": {
     "grunt": "~0.4.4",
     "grunt-bump": "0.0.14",
-    "grunt-harp": "~0.1.4"
+    "grunt-harp": "~0.1.4",
+    "grunt-git": "~0.2.10"
+  },
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "http://github.com/chewcode/chewcode.github.io.git"
   }
 }

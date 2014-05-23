@@ -29,8 +29,16 @@ module.exports = function(grunt) {
                 tagName: 'v%VERSION%',
                 tagMessage: 'Version %VERSION%',
                 push: true,
-                pushTo: 'upstream',
+                pushTo: 'github master',
                 gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d'
+            }
+        },
+        gitpush: {
+            origin: {
+                options: {
+                    remote: "origin",
+                    branch: "master"
+                }
             }
         }
     });
@@ -38,9 +46,10 @@ module.exports = function(grunt) {
     // Plugin loading
     grunt.loadNpmTasks("grunt-harp");
     grunt.loadNpmTasks("grunt-bump");
+    grunt.loadNpmTasks("grunt-git");
 
     // Task definition
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('deploy', ['bump', 'harp:dist']);
+    grunt.registerTask('deploy', ['harp:dist', 'gitpush:origin', 'bump']);
 
 };
