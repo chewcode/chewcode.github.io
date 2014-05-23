@@ -19,18 +19,31 @@ module.exports = function(grunt) {
             }
         },
         bump: {
+            // options: {
+            //     files: ['package.json'],
+            //     updateConfigs: [],
+            //     commit: true,
+            //     commitMessage: 'Release v%VERSION%',
+            //     commitFiles: '-a',
+            //     createTag: true,
+            //     tagName: 'v%VERSION%',
+            //     tagMessage: 'Version %VERSION%',
+            //     push: true,
+            //     pushTo: 'github master',
+            //     gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d'
+            // }
             options: {
                 files: ['package.json'],
                 updateConfigs: [],
                 commit: true,
                 commitMessage: 'Release v%VERSION%',
-                commitFiles: [' -a '],
+                commitFiles: ['-a'], // '-a' for all files
                 createTag: true,
                 tagName: 'v%VERSION%',
                 tagMessage: 'Version %VERSION%',
                 push: true,
-                pushTo: ' github ',
-                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d'
+                pushTo: 'github master',
+                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d' // options to use with '$ git describe'
             }
         },
         gitpush: {
