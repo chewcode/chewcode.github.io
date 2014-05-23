@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             },
             dist: {
                   source: '_harp',
-                  dest: 'read'
+                  dest: 'r'
             }
         },
         bump: {

@@ -1,6 +1,6 @@
 {
   "name": "Chew",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Chew Live streaming guide",
   "main": "Gruntfile.js",
   "scripts": {
